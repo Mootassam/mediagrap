@@ -1,0 +1,9 @@
+# local data (settings, download history, logs)
+data/
+# build output
+build_embed/
+build_cache/
+installer_output/
+# python
+__pycache__/
+*.pyc

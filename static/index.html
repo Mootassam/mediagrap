@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MediaGrab</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/static/app.css">
+  <script>
+    try { const t = localStorage.getItem('mg-theme'); if (t && t !== 'auto') document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand" data-go="download">
+      <div class="logo"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0-4.5-4.5M12 14l4.5-4.5" /><path d="M4 15v3a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-3" /></svg></div>
+      <span>MediaGrab</span>
+    </div>
+    <nav class="nav" id="nav">
+      <button data-go="download" class="active"><i data-i="search"></i><span>Download</span></button>
+      <button data-go="queue"><i data-i="list"></i><span>Downloads</span><b class="badge" id="qbadge" hidden></b></button>
+      <button data-go="settings"><i data-i="gear"></i><span>Settings</span></button>
+    </nav>
+    <button class="icon-btn" id="themeBtn" title="Toggle theme"><i data-i="moon"></i></button>
+  </header>
+
+  <main>
+    <section class="view active" id="view-download"></section>
+    <section class="view" id="view-queue"></section>
+    <section class="view" id="view-settings"></section>
+  </main>
+
+  <div class="toasts" id="toasts"></div>
+  <div class="drop-hint" id="dropHint"><div><i data-i="link"></i><b>Drop the link to analyze it</b></div></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
